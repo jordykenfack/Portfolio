@@ -20,3 +20,7 @@ I'm driven by curiosity and a desire to solve real-world problems through data. 
 Whether it's machine learning, data visualization, or analytics, I aim to bridge the gap between raw data and decision-making. I'm currently expanding my portfolio while preparing to step into the professional world as a data scientist.
     """
     st.info(content)
+
+
+content1 = """Below you will find some python apps I created."""
+st.write(content1 )
