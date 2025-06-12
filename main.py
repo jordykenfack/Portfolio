@@ -1,4 +1,6 @@
+import pandas
 import streamlit as st
+import pandas as pd
 
 st.set_page_config(layout="wide")
 
@@ -24,3 +26,18 @@ Whether it's machine learning, data visualization, or analytics, I aim to bridge
 
 content1 = """Below you will find some python apps I created."""
 st.write(content1 )
+
+col3,empty_col,col4 = st.columns([1.5,0.5,1.5])
+df = pandas.read_csv("data.csv",sep = ";")
+with col3:
+    for index, row in df[:10].iterrows():
+        st.header(row["title"])
+        st.write(row["description"])
+        st.image("images/"+row["image"])
+        st.write(f"[source code]({'url'})")
+with col4:
+    for index, row in df[10:].iterrows():
+        st.header(row["title"])
+        st.write(row["description"])
+        st.image("images/"+row["image"])
+        st.write(f"[source code]({'url'})")
