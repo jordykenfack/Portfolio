@@ -18,4 +18,3 @@ How are you ?"""
         server.sendmail(user_name, receiver_email, message)
 
 
-send_email()
